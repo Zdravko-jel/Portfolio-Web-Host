@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Space Jets Game",
+    "link": "https://github.com/Zdravko-jel/zdravko-jel.github.io/tree/main/SpaceJets",
+    "img_url": "assets/project_images/space_jets.png",
+    "work": "This is project I saw online while looking for what kind of projects you need to practice. And I decided to recreate it with my own kind of ships, levels and so on.",
+    "technologies": "The game is realized with C# language using Microsoft Forms, nothing special the movements are just timers."
+  },
+  {
+    "name": "Sudoku GUI Game - With Auto Solver",
+    "link": "https://github.com/Zdravko-jel/zdravko-jel.github.io/tree/main/Sudoku-Game",
+    "img_url": "assets/project_images/sudoku.png",
+    "work": "I personally like the game so much. That's why I decided to make an auto solver for Sudoku. Later decided to make the game actually playable with the option to solve it if it gets really hard.",
+    "technologies": "The game is realized only using Python with Tkinter for GUI. The Sudoku's are requests from a free API, and the solver is just a backtrack algorithm."
+  }
+]

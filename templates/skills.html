@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{{ bootstrap.load_css() }}
+{% block title %}Zdravko Zhelyazkov{% endblock %}
+{%block content %}
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Skills:</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                  <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+              </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Programming Languages</h3>
+            <ul class="list-group list-group-flush">
+              {% for item in skills["programming"] %}
+                <li class="list-group-item">
+                    {{ item["icon"] | safe }}
+                    <span>{{ item["skill"] }}</span>
+                    <span>{{ item["level"] * "⭐" }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-browser-chrome" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+              </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Web Technologies</h3>
+            <ul class="list-group list-group-flush">
+              {% for item in skills["web"] %}
+                <li class="list-group-item">
+                    {{ item["icon"] | safe }}
+                    <span>{{ item["skill"] }}</span>
+                    <span>{{ item["level"] * "⭐" }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                  <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"/>
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Personal Skills</h3>
+            <ul class="list-group list-group-flush">
+              {% for item in skills["personal"] %}
+                <li class="list-group-item">
+                    {{ item["icon"] | safe }}
+                    <span>{{ item["skill"] }}</span>
+                    <span>{{ item["level"] * "⭐" }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+{%block year%}{{date}}{%endblock%}

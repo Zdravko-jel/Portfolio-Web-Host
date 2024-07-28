@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{{ bootstrap.load_css() }}
+{% block title %}Zdravko Zhelyazkov{% endblock %}
+{%block content %}
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4 rounded" src="{{url_for('static', filename='assets/myself1.jpg')}}" alt="" width="200" height="200">
+        <h1 class="display-5 fw-bold text-body-emphasis">Hello, my name is Zdravko Zhelyazkov</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">I am a back-end developer, ready to toggle new and challenging projects.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <a href="{{url_for('get_in_touch')}}">
+                  <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Let's Connect</button>
+              </a>
+              <a href="{{url_for('about')}}">
+                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">Learn More</button>
+              </a>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+{%block year%}{{date}}{%endblock%}

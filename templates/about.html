@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{{ bootstrap.load_css() }}
+{% block title %}Zdravko Zhelyazkov{% endblock %}
+{%block content %}
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{url_for('static', filename='assets/myself2.jpg')}}" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">More about me</h1>
+            <p class="lead">I am a 22 years old student in Burgas Free University(BFU), very passionate, hardworking and person with an open mind. I have big dreams that I wish to achieve through programming and learning new skills. I spend my free time with my family, friends and exploring new horizons.</p>
+          </div>
+        </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{url_for('static', filename='assets/myself3.jpg')}}" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">How it started</h1>
+            <p class="lead">
+                Looking back in time my passion for programming was always there, I just didn't knew it.
+                When I was little my parents bought me my first computer and I got obsessed with playing video games.
+                But not like most of the kids you can see it though the way I look it is thanks to the computer.
+                However this so called addiction back then is what made me realize I don't just want to play video games, I want to create video games that everyone would love to play and enjoy.
+                That's what became my goal to one day create a game that will stay in time, long after me.
+                Something that I will be remembered about.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <h3 class="display-8 text-body-emphasis lh-1 mb-3">After you learned more about me and if you want to work with me. Feel free to contact me!</h3>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="{{url_for('get_in_touch')}}">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Contact Me</button>
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+{%block year%}{{date}}{%endblock%}

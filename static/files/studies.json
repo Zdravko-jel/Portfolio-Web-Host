@@ -1,0 +1,23 @@
+[
+  {
+    "name": "BFU - Burgas Free University",
+    "studied": "I am studying computer systems and technologies",
+    "learned": "I learned how to do everything on time, how to work in groups and how to challenge myself to be better.",
+    "grade": "Not done yet.",
+    "from_to": "Oct. 2021 - May 2025"
+  },
+  {
+    "name": "SoftUni: C# Basic, C# Fundamentals, C# Advanced, C# OOP",
+    "studied": "I studied the C# language and all it's aspects",
+    "learned": "I learned almost everything there is to know about C# that you need to work as a C# developer. Very enjoyable course.",
+    "grade": "6.00/6.00",
+    "from_to": "Nov. 2022 - Apr. 2024"
+  },
+  {
+    "name": "100 Days of Code: The Complete Python Pro Bootcamp",
+    "studied": "I studied the Python language and all it's aspects",
+    "learned": "I learned everything there is to know about Python that you need to work as a Python developer and Python-Web developer. Outstanding course.",
+    "grade": "6.00/6.00",
+    "from_to": "Nov. 2023 - July. 2024"
+  }
+]

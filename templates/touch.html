@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{{ bootstrap.load_css() }}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Zdravko Zhelyazkov{% endblock %}
+{%block content %}
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{{url_for('static', filename='assets/logo-dark.png')}}" alt="" width="60" height="60" id="logo3">
+        <h1 class="display-5 fw-bold text-body-emphasis">Contact Form</h1>
+        <div class="col-lg-6 mx-auto">
+          <h3 class="lead mb-4">{{text}}</h3>
+        </div>
+    </div>
+    <div class="px-5 py-5 my-5">
+        {{ render_form(form) }}
+    </div>
+{% endblock %}
+{%block year%}{{date}}{%endblock%}

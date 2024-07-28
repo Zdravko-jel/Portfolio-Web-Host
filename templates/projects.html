@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{{ bootstrap.load_css() }}
+{% block title %}Zdravko Zhelyazkov{% endblock %}
+{%block content %}
+    {% for i in range(len_projects)%}
+        {% if i % 2 == 0%}
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="{{url_for('static', filename=projects[i]['img_url'])}}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{projects[i]["name"]}}</h1>
+                    <h3 class="display-9 fw-bold text-body-emphasis lh-1 mb-3">{{projects[i]["technologies"]}}</h3>
+                    <p class="lead">{{projects[i]["work"]}}</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="{{projects[i]['link']}}">
+                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">GitHub Link</button>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="{{url_for('static', filename=projects[i]['img_url'])}}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{projects[i]["name"]}}</h1>
+                    <h3 class="display-9 fw-bold text-body-emphasis lh-1 mb-3">{{projects[i]["technologies"]}}</h3>
+                    <p class="lead">{{projects[i]["work"]}}</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="{{projects[i]['link']}}">
+                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">GitHub Link</button>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+{%block year%}{{date}}{%endblock%}
